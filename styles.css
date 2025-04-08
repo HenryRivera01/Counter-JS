@@ -17,3 +17,17 @@ body{
     margin-top: 0;
 }
 
+#increaseBtn{
+    background-color: lightgreen;
+}
+#decreaseBtn{
+    background-color: lightcoral;
+}
+#resetBtn{
+    background-color: lightskyblue;
+}
+
+.text-counter {
+    transition: color 0.3s ease-in-out;
+}
+

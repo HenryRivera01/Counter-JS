@@ -11,7 +11,7 @@ let textContentBackend = 0;
 function updateCounter(value) {
     textContentBackend += value;
     textCounter.textContent = textContentBackend;
-    console.log(textContentBackend);
+    changeColorCounter();
 }
 
 // Esta función le añade los eventos necesarios al botón que se pasa como argumento
@@ -36,6 +36,16 @@ function holdButton(button, value) {
     });
 }
 
+function changeColorCounter(){
+    if (textContentBackend > 0) {
+        textCounter.style.color = "green";
+    } else if (textContentBackend < 0) {
+        textCounter.style.color = "lightcoral";
+    } else {
+        textCounter.style.color = "#222"; // color neutro para cero
+    }
+}
+
 // Llamamos a la función para cada botón, aplicando la lógica de incremento o decremento
 holdButton(btnIncrease, 1);  // Botón para aumentar
 holdButton(btnDecrease, -1); // Botón para disminuir
@@ -44,5 +54,5 @@ holdButton(btnDecrease, -1); // Botón para disminuir
 btnReset.addEventListener('click', () => {
     textContentBackend = 0;
     textCounter.textContent = textContentBackend;
-    console.log(textContentBackend);
+    changeColorCounter();
 });
