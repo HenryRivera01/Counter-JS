@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgb(229, 229, 229);
+    border-radius: 1.5rem;
+}
+
+.title-counter{
+    margin-top: 0;
+}
+
